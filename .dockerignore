@@ -1,0 +1,5 @@
+pin-pkgs.sh
+Dockerfile
+
+*.template
+templates

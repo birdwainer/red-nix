@@ -1,0 +1,40 @@
+{ pkgs ? import (builtins.fetchGit {
+  # Descriptive name to make the store path easier to identify
+  name = "nixos-unstable-";
+  url = "https://github.com/nixos/nixpkgs/";
+  ref = "refs/heads/nixpkgs-unstable";
+  rev = 
+}) {} }:
+{
+  inherit (pkgs)
+    zsh
+    antigen
+    bat
+    burpsuite
+    curl
+    delta
+    exa
+    firefox
+    iproute2
+    netkittftp
+    gnused
+    gnugrep
+    gobuster
+    john
+    libressl
+    mitmproxy
+    metasploit
+    nmap
+    openvpn
+    p7zip
+    proxychains
+    proxytunnel
+    python3
+    sqlmap
+    tcpdump
+    thc-hydra
+    tmux
+    vim
+    wireshark
+    wfuzz;
+}
