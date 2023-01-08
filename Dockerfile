@@ -4,6 +4,7 @@ COPY config.nix /root/.config/nixpkgs/config.nix
 COPY nix-files /env-setup
 WORKDIR /env-setup
 
+RUN nix-env -if base.nix
 RUN nix-env -if network-recon.nix
 
 WORKDIR /usr/share/wordlists

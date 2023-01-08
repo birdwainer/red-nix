@@ -7,16 +7,22 @@
 }) {} }:
 {
   inherit (pkgs)
-    burpsuite
+    zsh
+    antigen
+    bat
+    curl
+    delta
+    exa
+    firefox
+    iproute2
+    gnused
+    gnugrep
     gobuster
-    john
-    mitmproxy
-    metasploit
-    nmap
-    proxychains
-    proxytunnel
-    sqlmap
-    thc-hydra
-    wireshark
-    wfuzz;
+    netkittftp
+    libressl
+    p7zip
+    python3
+    tcpdump
+    tmux
+    vim;
 }

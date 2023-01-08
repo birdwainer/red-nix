@@ -1,6 +1,8 @@
 #! /bin/sh
 
 sed -e "s/nixos-unstable-/nixos-unstable-$(date +%F)/" -e "s/rev = /rev = \"$(git ls-remote https://github.com/NixOS/nixpkgs.git refs/heads/nixpkgs-unstable \
+| cut -f 1)\";/" templates/base.template > nix-files/base.nix
+sed -e "s/nixos-unstable-/nixos-unstable-$(date +%F)/" -e "s/rev = /rev = \"$(git ls-remote https://github.com/NixOS/nixpkgs.git refs/heads/nixpkgs-unstable \
 | cut -f 1)\";/" templates/network-recon.template > nix-files/network-recon.nix
 
 xhost + local:docker
